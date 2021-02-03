@@ -26,6 +26,8 @@ flags.DEFINE_string('output_format', 'XVID', 'codec used in VideoWriter when sav
 flags.DEFINE_float('iou', 0.45, 'iou threshold')
 flags.DEFINE_float('score', 0.25, 'score threshold')
 flags.DEFINE_boolean('dont_show', False, 'dont show video output')
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 def main(_argv):
     config = ConfigProto()
